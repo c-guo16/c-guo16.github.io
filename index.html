@@ -4,14 +4,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV template</title>
+    <title>About Cheng Guo</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--Montserrat font-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+      .row {
+        display: flex; /* equal height of the children */
+      }
+
+      .col {
+        flex: 1; /* additionally, equal width */
+
+        /* padding: 1em; */
+        /* border: solid; */
+      }
+    </style>
   </head>
   <body>   
     <section>
@@ -29,27 +43,33 @@
       <!-- SOCIAL SECTION -->
       <section class="image-section w3-quarter w3-fixed w3-padding-small">
         <!--IMAGE/AVATAR-->
-        <img src="avatar.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
-        <!--SCIAL NETWORK BUTTONS-->
-        <div class="links w3-margin-top w3-padding-small">
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#facebook" target="_blank">
-              <i data-feather="facebook"></i>
-          </a>
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#instagram" target="_blank">
-             <i data-feather="instagram"></i>
-          </a>
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#twitter" target="_blank">
-             <i data-feather="twitter"></i>
-          </a>
-          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#linkedin" target="_blank">
-             <i data-feather="linkedin"></i>
-          </a>
+        <img src="photo.jpg" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important; margin-top: 3em;"/>
+
+        <!--SELF INTRODUCTION-->
+        <div class="">
+          <p style="font-style: bold; font-size:1.3em;text-align:center;"> 
+            Cheng Guo (郭诚)
+          </p>
         </div>
-        <!--CV DOWNLOAD BUTTON-->
-        <div class="w3-container w3-padding-16">
-          <a href="./resume.pdf" class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large" target="_blank" download="resume.pdf">
-            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
-            <span class="w3-margin-left download-text">DOWNLOAD CV</span>
+        <div>
+          <p style="font-style: bold; font-size:1em;"> 
+            Hello, I'm now an MSc student who is researching on network technologies in Tsinghua University.
+          </p>
+        </div>
+
+        <ul style="list-style:none; margin-left: -2em;">
+          <li style="margin-top: 2em;"><i class="fa fa-map-marker" aria-hidden="true" style="margin-left: 0.2em;margin-right: 0.2em;"></i> Beijing, China</li>
+          <li style="margin-top: 0.3em;"><i
+            class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:aeromarisa@gmail.com" target="_blank">aeromarisa@gmail.com</a></li>
+          <li style="margin-top: 0.3em;"><i class="fa fa-github"
+            aria-hidden="true"></i> <a href="https://github.com/c-guo16" target="_blank">@c-guo16</a></li>
+      </ul>
+
+        <!--RESUME DOWNLOAD BUTTON-->
+        <div class="w3-padding-16" style="text-align: center;">
+          <a href="./my_resume.pdf" class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large" target="_blank" download="resume.pdf">
+            <i data-feather="arrow-down" style="vertical-align: -0.35em; margin-left: -1em;"></i>
+            <span class="download-text" style=" margin-right: -0.8em;">DOWNLOAD RESUME</span>
           </a>
         </div>
       </section>
@@ -58,24 +78,32 @@
       <section class="w3-threequarter w3-padding-large w3-right">
         <!--DESKTOP NAVIGATION-->
         <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
-          <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">CURRICULUM VITAE</a>
-          <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+          
+          <a href="#research" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Research Interests</a>
+          <a href="#education" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Education</a>
+          <a href="#publications" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Publications</a>
+          <a href="#work" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Working Experience</a>
+          <a href="#skills" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Skills</a>
+          <!-- <a href="#research" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">Research Interests</a>
           <a href="#resume" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
-          <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+          <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a> -->
         </div>
         <div class="content-container w3-margin-top-2">
           <!--HOME SECTION-->
           <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
-            <p style="font-style: italic; font-size:x-large;">"The mind is the limit. When you face your struggles, you overcome them."</p>
-            <h1>John Doe (35)</h2>
-            <h2>Community manager</h3>
+            <p style="font-style: italic; font-size:x-large;">"会当凌绝顶，爱与苍生共。"</p>
+            <!-- <h1>John Doe (35)</h2>
+            <h2>Community manager</h3> -->
             <p></p>
           </div>
 
           <!--ABOUT SECTION-->
           <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">About Me</h2>
             <p class="w3-margin-top-2"> 
+              I'm a postgraduate student in Institute for Network Science and Cyberspace of Tsinghua University now, advised by Prof. Mingwei Xu. I plan to receive my M.Sc. degree in Jun, 2024. My research fields includes programmable network, high performance network and distributed ML acceleration.
+            </p>
+            <!-- <p class=""> 
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                Nam porttitor sollicitudin efficitur. 
                Integer posuere odio vel ullamcorper euismod. 
@@ -90,123 +118,232 @@
                Aliquam sit amet nulla tortor. 
                Integer vehicula nunc et condimentum feugiat. 
                Aenean tempor, dolor in pharetra euismod, lacus eros suscipit massa, in aliquet risus orci non leo.
-            </p>
-            <p class=""> 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-               Nam porttitor sollicitudin efficitur. 
-               Integer posuere odio vel ullamcorper euismod. 
-               Aliquam sit amet nulla tortor. 
-               Integer vehicula nunc et condimentum feugiat. 
-               Aenean tempor, dolor in pharetra euismod, lacus eros suscipit massa, in aliquet risus orci non leo.
-            </p>
+            </p> -->
           </div>
 
-          <!--RESUME-->
-          <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">RESUME</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-
-              <!--EMPLOYMENT HISTORY SECTION-->
-              <h3 class="w3-border-amber">MY EMPLOYMENT HISTORY</h3>
-              <div class="">
-                <h4>Community Manager at the Company-X</h4>
-                <p>September 2020 - Present</p>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>Ensured that published content meets brand guidelines and overall communication styles</li>
-                  <li>Built relations with the online community</li>
-                  <li>Implemented social media strategies to increase engagement and followers</li>
-                </ul>
-              </div>
-              <div class="">
-                <h4>Social Community Manager at the Company-Y</h4>
-                <p>January 2017 - June 2020 </p>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>Ensured that audience growth rate is in increase through social networs</li>
-                  <li>Managed social media campaigns for various social media platforms to align with marketing strategies</li>
-                  <li>Monitored and provided feedback on engagement/conversation via social media channels to leadership</li>
-                </ul>
-              </div>
-              <div class="">
-                <h4>Social Community Manager at the Company-Z</h4>
-                <p>January 2014 - April 2016 </p>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>Organized and managed community events to boost brand awareness</li>
-                  <li>Monitored, tracked and reported on feedback and online reviews</li>
-                  <li>Provided engaging text, image and video content for all social media and professional accounts</li>
-                </ul>
-              </div>
-            </div>
-
-            <!---EDUCATION SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY EDUCATION</h3>
-                <h4>College diploma, College of management, Houston</h4>
-                <p>October 2008 - July 2013 </p>
-                <h4>Highschool diploma, XYZ Highschool, Houston</h4>
-                <p>October 2004 - July 2008 </p>
-            </div>
-
-            <!--SKILLS SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY SKILLS</h3>
-              <!--SOFT SKILLS-->
-              <h4>Soft skills</h4>
-              <ul class="w3-ul" style="font-weight: 500;">
-                <li>I have excelent communication skill and confidence in front of an audience</li>
-                <li>I have a talent for investigating and researching different processes to offer different improvements and solution for the benefit of the organization </li>
-                <li>Provided engaging text, image and video content for all social media and professional accounts</li>
+          <!--RESEARCH INTEREST-->
+          <div id="research" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Research Interests</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+              <ul style="margin-left: -2em;">
+                <li>
+                  <h3 class="w3-border-amber" style="margin-bottom: -0.4em;"> Programmable Network</h3>
+                  <p class="w3-margin-left"> 
+                    I have worked on newly emerged programmable network hardware since 2020, including programmable switching ASIC, SmartNIC, etc. I'm familiar with the design strategy and implementation of various programmable offloading systems. I also have some knowledge about software acceleration techniques, e.g. eBPF, DPDK.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="w3-border-amber" style="margin-bottom: -0.4em;">High Performance Network</h3>
+                  <p class="w3-margin-left"> 
+                    I have some experience in RDMA and high performance network. I joined lots of discussions about RDMA applications in industrial scenarios.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="w3-border-amber" style="margin-bottom: -0.4em;">Distributed ML Acceleration</h3>
+                  <p class="w3-margin-left"> 
+                    I've learned a lot about the state-of-the-art acceleration techniques of data-parallel distributed ML training, including on-switch aggregation, gradient compression, communication library optimization, etc.
+                  </p>
+                </li>
               </ul>
-              <!--TECHNICAL SKILLS-->
-              <h4>Technical skills</h4>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>I have a great experience with MS Office tools</li>
-                  <li>I am proficient in technical writing</li>
-                  <li>Provided engaging text, image and video content for all social media and professional accounts</li>
-                </ul>
             </div>
-
-            <!--INTERESTS SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY HOBBIES AND INTERESTS</h3>
-                <ul class="w3-ul" style="font-weight: 500;">
-                  <li>I love mountain hiking and cycling in my free time</li>
-                  <li>I like to play board games with other people</li>
-                </ul>
-            </div>
-
-            <!--REFERENCE SECTION-->
-            <div class="w3-container w3-margin-top-2 w3-cursive">
-              <h3 class="w3-border-amber">MY REFERENCES</h3>
-              <h4>Jane Doe, CEO at Company-Z</h4>
-              <ul class="w3-ul" style="font-weight: 500;">
-                <li>+0123456789</li>
-                <li>janedoe@companyz.com</li>
-              </ul>
-              <h4>Margaret Johnson, Manager at Company-Y</h4>
-              <ul class="w3-ul" style="font-weight: 500;">
-                <li>+9876543210</li>
-                <li>mjohnson@companyy.com</li>
-              </ul>
-            </div>            
           </div>
 
-          <!--CONTACT SECTION-->
-          <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
-            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT DETAILS</h3>
-            <div class="w3-margin-top-2" style="font-weight: 500;">
-              <p>Name: John Doe</p>
-              <p>Adress: Street name 99, 77001 Houston, Texas</p>
-              <p>Phone number: +0123456789</p>
-              <p>E-mail: johndoe@email.com</p>
+          <!---EDUCATION-->
+          <div id="education" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Education</h2>
+            <p><i class="fa fa-calendar"></i> November 2021 - June 2024 </p>
+            <h4 style="margin-top: -0.5em;"><strong>M.Sc. degree</strong> in Tsinghua University,  Institute for Network Science and Cyberspace, Beijing</h4>
+            <p style="margin-top: 2em;"><i class="fa fa-calendar"></i> November 2017 - June 2021 </p>
+            <h4 style="margin-top: -0.5em;"><strong>B.Eng. degree</strong> in Tsinghua University,  Department of Computer Science and Technology, Beijing</h4>
+          </div>
+
+          <!--PUBLICATIONS-->
+          <div id="publications" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Publications</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+              <ul style="margin-left: -2em;">
+                <li>
+                  <a href="https://www.usenix.org/conference/nsdi22/presentation/li-guanyu" style="color:rgb(11, 84, 221)">IMap: Fast and Scalable In-Network Scanning with Programmable Switches.</a> <font style="color:red;">[NSDI 2022]</font>
+
+                  <p style="margin-top: 0.5em;">
+                    Guanyu Li, Menghao Zhang, <strong>Cheng Guo</strong>, Han Bao, Mingwe Xu, Hongxin Hu, Fenghua Li. CCF-A/TH-CPL-A, full paper acceptance ratio: 50/298 = 16.8
+                  </p>
+                </li>
+                <li>
+                  <a href="https://dl.acm.org/doi/10.1145/3484266.3487368" style="color:rgb(11, 84, 221)">Switches are Scanners Too! A Fast and Scalable In-Network Scanner with Programmable Switches.</a> <font style="color:red;">[HotNets 2021]</font>
+
+                  <p style="margin-top: 0.5em;">
+                    Guanyu Li, Menghao Zhang, <strong>Cheng Guo</strong>, Han Bao, Mingwe Xu, Hongxin Hu. CCF-C/TH-CPL-B, full paper acceptance ratio: 31/101 = 30.7
+                  </p>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <!---WORK-->
+          <div id="work" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Working Experience</h2>
+            <p><i class="fa fa-calendar"></i> June 2022 - November 2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker"></i> <strong>ByteDance</strong>, Beijing
+            </p>
+            <ul>
+              <li>
+                <h4 style="margin-top: -0.5em;">Internship in the High Speed Network group</h4>
+              </li>
+              <li>
+                <h4 style="margin-top: -0.5em;">Keynotes: DMA adaptive routing, IB network, distributed ML acceleration</h4>
+              </li>
+            </ul>
+          </div>
+
+          <!--PATENTS-->
+          <div id="patents" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Patents</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+              <ul style="margin-left: -2em;">
+                <li>
+                  <p style="margin-top: 0.5em;">
+                    徐明伟,<strong>郭诚</strong>,李冠宇,张梦豪,王士诚,李琦. 流量特征提取方法、系统、存储介质及电子设备[P]. 202111322171.2, 2021-11-09
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--SKILLS-->
+          <div id="skills" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Skills</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+              <h4 style="font-style: italic;color:rgb(11, 84, 221);">Programming</h4>
+              <ul class="w3-ul w3-border-bottom w3-border-top" style="font-weight: 500;">
+                <li>
+                  <div class="row">
+                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                      <strong>Proficient</strong>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      C/C++<br>
+                      Python<br>
+                      P4<br>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                      <strong>Competent</strong>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      Bash<br>
+                      Matlab<br>
+                      LaTeX<br>
+                      HTML<br>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                  <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                    <strong>Beginner</strong>
+                  </div>
+                  <div class="col" style="text-align: right;">
+                    Java<br>
+                    HDL<br>
+                  </div>
+                </div>
+              </li>
+              </ul>
+
+              <h4 style="font-style: italic;color:rgb(11, 84, 221); margin-top: 2em;">Software & Tools</h4>
+              <ul class="w3-ul w3-border-bottom w3-border-top" style="font-weight: 500;">
+                <li>
+                  <div class="row">
+                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                      <strong>Proficient</strong>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      Matplotlib<br>
+                      Office<br>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                      <strong>Competent</strong>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      Numpy/Pandas<br>
+                      TensorFlow/Keras/Sklearn<br>
+                      Git<br>
+                      VM<br>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                  <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                    <strong>Beginner</strong>
+                  </div>
+                  <div class="col" style="text-align: right;">
+                    Docker<br>
+                  </div>
+                </div>
+              </li>
+              </ul>
+              <h4 style="font-style: italic;color:rgb(11, 84, 221); margin-top: 2em;">Language</h4>
+              <ul class="w3-ul w3-border-bottom w3-border-top" style="font-weight: 500;">
+                <li>
+                  <div class="row">
+                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                      <strong>Proficient</strong>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      Chinese<br>
+                      English<br>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                      <strong>Competent</strong>
+                    </div>
+                    <div class="col" style="text-align: right;">
+                      Japanese<br>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                  <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
+                    <strong>Beginner</strong>
+                  </div>
+                  <div class="col" style="text-align: right;">
+                    German<br>
+                  </div>
+                </div>
+              </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--HOBBIES-->
+          <div id="hobbies" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">HOBBIES</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <ul class="w3-ul" style="font-size: large;">
+                <li>I love swimming and cycling in my free time.</li>
+                <li>I'm a keen lover of various music styles.</li>
+                <li>I like animes and games for relaxation.</li>
+              </ul>
+            </div>           
           </div>
 
         <!--FOOTER-->
         <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
         <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
-          <p>© 2021 - John Doe</p>
-           <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-          <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> 
+          <p>© 2023 - Cheng Guo</p>
+           <p class="w3-small">This website was made with W3schools Spaces. </p>
         <!-- End footer -->
         </footer>
 
