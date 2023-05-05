@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +13,11 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/feather-icons"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script
+        type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+    <script
+        type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } }); </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <style>
       .row {
         display: flex; /* equal height of the children */
@@ -25,9 +29,13 @@
         /* padding: 1em; */
         /* border: solid; */
       }
+
+      body {
+        font-family: "Segoe UI","Microsoft YaHei","Arial", sans-serif;
+      }
     </style>
   </head>
-  <body>   
+  <body style="max-width: 70em;margin: 0 auto;">   
     <section>
       <!-- MOBILE NAVIGATION -->
       <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
@@ -42,8 +50,12 @@
 
       <!-- SOCIAL SECTION -->
       <section class="image-section w3-quarter w3-fixed w3-padding-small">
+
         <!--IMAGE/AVATAR-->
-        <img src="photo.jpg" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important; margin-top: 3em;"/>
+        <div style="text-align: center;">
+          <img src="photo.jpg" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important; margin-top: 3em;width: 80%;"/>
+        </div>
+        
 
         <!--SELF INTRODUCTION-->
         <div class="">
@@ -90,15 +102,15 @@
         </div>
         <div class="content-container w3-margin-top-2">
           <!--HOME SECTION-->
-          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
-            <p style="font-style: italic; font-size:x-large;">"会当凌绝顶，爱与苍生共。"</p>
+          <div id="home" class="home w3-container w3-margin-top-4" style="text-align: center;">
+            <p style="font-family: 'stxinwei';font-style: italic; font-size:xx-large;">“会当凌绝顶，爱与苍生共。”</p>
             <!-- <h1>John Doe (35)</h2>
             <h2>Community manager</h3> -->
             <p></p>
           </div>
 
           <!--ABOUT SECTION-->
-          <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+          <div id="about" class="w3-container w3-margin-top-20-percent w3-large">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">About Me</h2>
             <p class="w3-margin-top-2"> 
               I'm a postgraduate student in Institute for Network Science and Cyberspace of Tsinghua University now, advised by Prof. Mingwei Xu. I plan to receive my M.Sc. degree in Jun, 2024. My research fields includes programmable network, high performance network and distributed ML acceleration.
@@ -122,9 +134,9 @@
           </div>
 
           <!--RESEARCH INTEREST-->
-          <div id="research" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="research" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Research Interests</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+            <div class="w3-container w3-margin-top-2  w3-large">
               <ul style="margin-left: -2em;">
                 <li>
                   <h3 class="w3-border-amber" style="margin-bottom: -0.4em;"> Programmable Network</h3>
@@ -149,18 +161,18 @@
           </div>
 
           <!---EDUCATION-->
-          <div id="education" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="education" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Education</h2>
             <p><i class="fa fa-calendar"></i> November 2021 - June 2024 </p>
-            <h4 style="margin-top: -0.5em;"><strong>M.Sc. degree</strong> in Tsinghua University,  Institute for Network Science and Cyberspace, Beijing</h4>
+            <p style="margin-top: -0.5em;font-size: large;"><strong>M.Sc. degree</strong> in Tsinghua University,  Institute for Network Science and Cyberspace, Beijing</p>
             <p style="margin-top: 2em;"><i class="fa fa-calendar"></i> November 2017 - June 2021 </p>
-            <h4 style="margin-top: -0.5em;"><strong>B.Eng. degree</strong> in Tsinghua University,  Department of Computer Science and Technology, Beijing</h4>
+            <p style="margin-top: -0.5em;font-size: large;"><strong>B.Eng. degree</strong> in Tsinghua University,  Department of Computer Science and Technology, Beijing</p>
           </div>
 
           <!--PUBLICATIONS-->
-          <div id="publications" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="publications" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Publications</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+            <div class="w3-container w3-margin-top-2  w3-large">
               <ul style="margin-left: -2em;">
                 <li>
                   <a href="https://www.usenix.org/conference/nsdi22/presentation/li-guanyu" style="color:rgb(11, 84, 221)">IMap: Fast and Scalable In-Network Scanning with Programmable Switches.</a> <font style="color:red;">[NSDI 2022]</font>
@@ -181,24 +193,24 @@
           </div>
 
           <!---WORK-->
-          <div id="work" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="work" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Working Experience</h2>
             <p><i class="fa fa-calendar"></i> June 2022 - November 2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker"></i> <strong>ByteDance</strong>, Beijing
             </p>
             <ul>
               <li>
-                <h4 style="margin-top: -0.5em;">Internship in the High Speed Network group</h4>
+                <p style="margin-top: -0.3em;font-size: large;">Internship in the High Speed Network group</p>
               </li>
               <li>
-                <h4 style="margin-top: -0.5em;">Keynotes: DMA adaptive routing, IB network, distributed ML acceleration</h4>
+                <p style="margin-top: -0.8em;font-size: large;">Keynotes: DMA adaptive routing, IB network, distributed ML acceleration</p>
               </li>
             </ul>
           </div>
 
           <!--PATENTS-->
-          <div id="patents" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="patents" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Patents</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+            <div class="w3-container w3-margin-top-2  w3-large">
               <ul style="margin-left: -2em;">
                 <li>
                   <p style="margin-top: 0.5em;">
@@ -210,15 +222,17 @@
           </div>
 
           <!--SKILLS-->
-          <div id="skills" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="skills" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">Skills</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive w3-large">
+            <div class="w3-container w3-margin-top-2  w3-large">
               <h4 style="font-style: italic;color:rgb(11, 84, 221);">Programming</h4>
               <ul class="w3-ul w3-border-bottom w3-border-top" style="font-weight: 500;">
                 <li>
                   <div class="row">
-                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                      <strong>Proficient</strong>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Proficient</strong>
+                      </div>
                     </div>
                     <div class="col" style="text-align: right;">
                       C/C++<br>
@@ -229,8 +243,10 @@
                 </li>
                 <li>
                   <div class="row">
-                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                      <strong>Competent</strong>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Competent</strong>
+                      </div>
                     </div>
                     <div class="col" style="text-align: right;">
                       Bash<br>
@@ -242,9 +258,11 @@
                 </li>
                 <li>
                   <div class="row">
-                  <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                    <strong>Beginner</strong>
-                  </div>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Beginner</strong>
+                      </div>
+                    </div>
                   <div class="col" style="text-align: right;">
                     Java<br>
                     HDL<br>
@@ -257,8 +275,10 @@
               <ul class="w3-ul w3-border-bottom w3-border-top" style="font-weight: 500;">
                 <li>
                   <div class="row">
-                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                      <strong>Proficient</strong>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Proficient</strong>
+                      </div>
                     </div>
                     <div class="col" style="text-align: right;">
                       Matplotlib<br>
@@ -268,8 +288,10 @@
                 </li>
                 <li>
                   <div class="row">
-                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                      <strong>Competent</strong>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Competent</strong>
+                      </div>
                     </div>
                     <div class="col" style="text-align: right;">
                       Numpy/Pandas<br>
@@ -281,9 +303,11 @@
                 </li>
                 <li>
                   <div class="row">
-                  <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                    <strong>Beginner</strong>
-                  </div>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Beginner</strong>
+                      </div>
+                    </div>
                   <div class="col" style="text-align: right;">
                     Docker<br>
                   </div>
@@ -294,8 +318,10 @@
               <ul class="w3-ul w3-border-bottom w3-border-top" style="font-weight: 500;">
                 <li>
                   <div class="row">
-                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                      <strong>Proficient</strong>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Proficient</strong>
+                      </div>
                     </div>
                     <div class="col" style="text-align: right;">
                       Chinese<br>
@@ -305,8 +331,10 @@
                 </li>
                 <li>
                   <div class="row">
-                    <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                      <strong>Competent</strong>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Competent</strong>
+                      </div>
                     </div>
                     <div class="col" style="text-align: right;">
                       Japanese<br>
@@ -315,9 +343,11 @@
                 </li>
                 <li>
                   <div class="row">
-                  <div class="col" style="text-align: left;position: absolute;top: 50%;transform: translateY(-50%)">
-                    <strong>Beginner</strong>
-                  </div>
+                    <div class="col" style="text-align: left;">
+                      <div style="position: relative;top: 50%;transform: translateY(-50%);">
+                        <strong>Beginner</strong>
+                      </div>
+                    </div>
                   <div class="col" style="text-align: right;">
                     German<br>
                   </div>
@@ -328,9 +358,9 @@
           </div>
 
           <!--HOBBIES-->
-          <div id="hobbies" class="w3-container w3-margin-top-20-percent w3-cursive">
+          <div id="hobbies" class="w3-container w3-margin-top-20-percent ">
             <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">HOBBIES</h2>
-            <div class="w3-container w3-margin-top-2 w3-cursive">
+            <div class="w3-container w3-margin-top-2 ">
               <ul class="w3-ul" style="font-size: large;">
                 <li>I love swimming and cycling in my free time.</li>
                 <li>I'm a keen lover of various music styles.</li>
